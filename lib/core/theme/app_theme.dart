@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../constants/colors.dart';
 
 class AppTheme {
   static ThemeData get lightTheme {
+
     final base = ColorScheme.fromSeed(
       seedColor: AppColors.primaryColor,
       brightness: Brightness.light,
@@ -13,18 +13,42 @@ class AppTheme {
       useMaterial3: true,
       brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.background,
+
       colorScheme: base.copyWith(
         primary: AppColors.primaryColor,
         onPrimary: AppColors.onPrimaryColor,
-        surface: AppColors.surface,
-        surfaceContainerLow: AppColors.surfaceContainerLow,
+        surface: AppColors.surface,  
         onSurface: AppColors.onSurface,
-        onSurfaceVariant: AppColors.onSurfaceVariant,
-        surfaceContainer: AppColors.surfaceContainer,
-        outline: AppColors.outline,
         error: AppColors.error,
         tertiary: AppColors.tertiary,
-        onTertiary: AppColors.onTertiary,
+      ),
+
+      textTheme: TextTheme(
+        bodyLarge: TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 36,
+          fontWeight: FontWeight.w700,
+          color: AppColors.onSurface,
+        
+        ),
+        bodyMedium: TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 18,
+          fontWeight: FontWeight.w400,
+          color: AppColors.onSurface,
+        ),
+        bodySmall: TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          color: AppColors.onSurface,
+        ),
+        labelSmall: TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 14,
+          fontWeight: FontWeight.w400,
+          color: AppColors.onSurface,
+        ),
       ),
     );
   }
