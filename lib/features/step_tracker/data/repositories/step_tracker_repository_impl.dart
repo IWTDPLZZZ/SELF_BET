@@ -5,18 +5,16 @@ import 'package:self_bet/features/step_tracker/domain/entities/goal.dart';
 import 'package:self_bet/features/step_tracker/domain/repositories/repositories.dart';
 
 class StepTrackerRepositoryImpl implements StepTrackerRepository {
-  StepTrackerRepositoryImpl({
-    required Stream<Goal> currentGoalStream,
-  }) : _currentGoalStream = currentGoalStream;
-
-  final Stream<Goal> _currentGoalStream;
 
   final StreamController<int> _stepCountController =
       StreamController<int>.broadcast();
+  
+  @override
+  Stream<int> getStepCount() => _stepCountController.stream;
+
 
   StreamSubscription<StepCount>? _pedometerSubscription;
 
-  Stream<Goal> get currentGoalStream => _currentGoalStream;
 
   void onStepCount(StepCount event) {
     final int step = event.steps;
@@ -44,8 +42,6 @@ class StepTrackerRepositoryImpl implements StepTrackerRepository {
     _stepCountController.close();
   }
 
-  @override
-  Stream<int> getStepCount() => _stepCountController.stream;
 
   @override
   Future<Goal> getGoal() {

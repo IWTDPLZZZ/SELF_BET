@@ -24,6 +24,12 @@ class AppTheme {
       ),
 
       textTheme: TextTheme(
+        titleLarge: TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: AppColors.primaryColor,
+        ),
         bodyLarge: TextStyle(
           fontFamily: 'Inter',
           fontSize: 36,
