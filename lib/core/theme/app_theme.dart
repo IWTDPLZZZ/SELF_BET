@@ -32,7 +32,7 @@ class AppTheme {
         ),
         bodyLarge: TextStyle(
           fontFamily: 'Inter',
-          fontSize: 36,
+          fontSize: 28,
           fontWeight: FontWeight.w700,
           color: AppColors.onSurface,
         
