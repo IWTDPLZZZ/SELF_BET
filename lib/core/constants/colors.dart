@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
-  static const background = Color(0xFFFBFBFD);
+  /// Cool grey-blue scaffold (lighter than #F0F3F6, still off-white vs cards).
+  static const background = Color(0xFFF5F7F9);
+  /// Pure white for app bar and elevated cards on [background].
+  static const surfaceWhite = Color(0xFFFFFFFF);
   static const surface = Color(0xFFF2F4F6);
   static const onSurface = Color(0xFF2E3336);
 

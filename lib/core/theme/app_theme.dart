@@ -12,15 +12,19 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
+      // Milky scaffold/canvas; keep in sync with AppColors.background.
       scaffoldBackgroundColor: AppColors.background,
+      canvasColor: AppColors.background,
 
       colorScheme: base.copyWith(
         primary: AppColors.primaryColor,
         onPrimary: AppColors.onPrimaryColor,
-        surface: AppColors.surface,  
+        surface: AppColors.surface,
         onSurface: AppColors.onSurface,
         error: AppColors.error,
         tertiary: AppColors.tertiary,
+        // Avoid M3 primary tint washing out the scaffold milky background.
+        surfaceTint: Colors.transparent,
       ),
 
       textTheme: TextTheme(

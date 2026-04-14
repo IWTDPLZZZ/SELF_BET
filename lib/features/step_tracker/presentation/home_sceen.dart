@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:self_bet/core/constants/colors.dart';
 import 'package:self_bet/core/widgets/app_bars/primary_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -67,12 +68,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 163,
                 height: 133,
                 decoration: BoxDecoration(
-                  color: Color.lerp(
-                    Theme.of(context).colorScheme.surface,
-                    Theme.of(context).colorScheme.onSurface,
-                    0.07,
-                  )!,
+                  color: AppColors.surfaceWhite,
                   borderRadius: BorderRadius.circular(48),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.onSurface.withValues(alpha: 0.06),
+                      blurRadius: 16,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

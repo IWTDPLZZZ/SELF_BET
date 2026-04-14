@@ -16,8 +16,9 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
         'Mindful Sanctuary',
         style: Theme.of(context).textTheme.titleLarge,
       ),
-      iconTheme: IconThemeData(color: Theme.of(context).colorScheme.onPrimary),
-      backgroundColor: AppColors.background,
+      iconTheme: IconThemeData(color: AppColors.onSurface),
+      backgroundColor: AppColors.surfaceWhite,
+      surfaceTintColor: Colors.transparent,
       elevation: 0,
       leading: IconButton(
         onPressed: () {},
