@@ -4,14 +4,14 @@ import 'package:self_bet/core/constants/colors.dart';
 
 class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title = 'Mindful Sanctuary';
-  PrimaryAppBar({super.key});
+  const PrimaryAppBar({super.key});
 
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      centerTitle: false,
+      centerTitle: true,
       title: Text(
         'Mindful Sanctuary',
         style: Theme.of(context).textTheme.titleLarge,

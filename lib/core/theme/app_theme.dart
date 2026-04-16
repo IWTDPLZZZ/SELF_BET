@@ -57,7 +57,7 @@ class AppTheme {
           fontFamily: 'Inter',
           fontSize: 14,
           fontWeight: FontWeight.w400,
-          color: AppColors.onSurface,
+          color: AppColors.primaryColor,
         ),
       ),
     );
